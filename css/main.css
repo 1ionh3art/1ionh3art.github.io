@@ -1769,7 +1769,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff2fff;
+  background: #88ff71;
 }
 .feed-link,
 .chat {
@@ -2138,14 +2138,6 @@ pre .javascript .function {
 .has-jax {
   overflow-x: auto;
   overflow-y: hidden;
-}
-.gt-header a,
-.gt-comments a,
-.gt-popup a {
-  border-bottom: none;
-}
-.gt-container .gt-popup .gt-action.is--active:before {
-  top: 0.7em;
 }
 .page-archive .archive-page-counter {
   position: relative;
