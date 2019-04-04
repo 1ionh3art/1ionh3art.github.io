@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://heart4lion.github.io/about/index.html</loc>
+    
+    <lastmod>2019-04-04T08:51:12.599Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://heart4lion.github.io/schedule/index.html</loc>
+    
+    <lastmod>2019-04-04T08:51:06.286Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://heart4lion.github.io/tags/index.html</loc>
     
-    <lastmod>2019-04-04T08:48:44.915Z</lastmod>
+    <lastmod>2019-04-04T08:50:54.672Z</lastmod>
     
   </url>
   
@@ -26,20 +40,6 @@
     <loc>https://heart4lion.github.io/categories/index.html</loc>
     
     <lastmod>2019-04-04T08:03:16.664Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://heart4lion.github.io/schedule/index.html</loc>
-    
-    <lastmod>2019-04-03T06:03:37.742Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://heart4lion.github.io/about/index.html</loc>
-    
-    <lastmod>2019-04-03T06:02:34.548Z</lastmod>
     
   </url>
   
