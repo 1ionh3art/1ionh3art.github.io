@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://heart4lion.github.io/tags/index.html</loc>
+    
+    <lastmod>2019-04-04T08:48:44.915Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://heart4lion.github.io/2019/04/04/demo/</loc>
     
     <lastmod>2019-04-04T08:10:59.389Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://heart4lion.github.io/2019/04/03/hello-world/</loc>
     
     <lastmod>2019-04-04T08:10:09.262Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://heart4lion.github.io/tags/index.html</loc>
-    
-    <lastmod>2019-04-04T08:05:54.956Z</lastmod>
     
   </url>
   
