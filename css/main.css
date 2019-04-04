@@ -1617,6 +1617,16 @@ pre .javascript .function {
 .fancybox-close:hover {
   border: none;
 }
+.post-copyright {
+  margin: 2em 0 0;
+  padding: 0.5em 1em;
+  border-left: 3px solid #ff1700;
+  background-color: #f9f9f9;
+  list-style: none;
+}
+.post-copyright i.fa {
+  font-size: 15px;
+}
 .rtl.post-body p,
 .rtl.post-body a,
 .rtl.post-body h1,
@@ -1727,6 +1737,15 @@ pre .javascript .function {
   border: 1px solid #eee;
   opacity: 1;
 }
+.site-author-image {
+  border-radius: 100%;
+}
+.site-author-image {
+  transition: transform 1s ease-out;
+}
+.site-author-image:hover {
+  transform: rotateZ(360deg);
+}
 .site-author-name {
   margin: 0;
   text-align: center;
@@ -1763,7 +1782,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff30;
+  background: #b4b8ff;
 }
 .feed-link,
 .chat {
@@ -1879,6 +1898,66 @@ pre .javascript .function {
 .site-state-item-name {
   font-size: 13px;
   color: #999;
+}
+.post-toc-empty {
+  font-size: 14px;
+  color: #666;
+}
+.post-toc-wrap {
+  overflow: hidden;
+}
+.post-toc {
+  overflow: auto;
+}
+.post-toc ol {
+  margin: 0;
+  padding: 0 2px 5px 10px;
+  text-align: left;
+  list-style: none;
+  font-size: 14px;
+}
+.post-toc ol > ol {
+  padding-left: 0;
+}
+.post-toc ol a {
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  transition-property: all;
+  color: #666;
+  border-bottom-color: #ccc;
+}
+.post-toc ol a:hover {
+  color: #000;
+  border-bottom-color: #000;
+}
+.post-toc .nav-item {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.8;
+}
+.post-toc .nav .nav-child {
+  display: none;
+}
+.post-toc .nav .active > .nav-child {
+  display: block;
+}
+.post-toc .nav .active-current > .nav-child {
+  display: block;
+}
+.post-toc .nav .active-current > .nav-child > .nav-item {
+  display: block;
+}
+.post-toc .nav .active > a {
+  color: #fc6423;
+  border-bottom-color: #fc6423;
+}
+.post-toc .nav .active-current > a {
+  color: #fc6423;
+}
+.post-toc .nav .active-current > a:hover {
+  color: #fc6423;
 }
 .footer {
   font-size: 14px;

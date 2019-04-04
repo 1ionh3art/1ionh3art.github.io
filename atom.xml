@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://heart4lion.github.io/"/>
-  <updated>2019-04-03T16:04:38.962Z</updated>
+  <updated>2019-04-04T08:10:59.389Z</updated>
   <id>https://heart4lion.github.io/</id>
   
   <author>
@@ -21,20 +21,24 @@
     <link href="https://heart4lion.github.io/2019/04/04/demo/"/>
     <id>https://heart4lion.github.io/2019/04/04/demo/</id>
     <published>2019-04-04T00:04:14.000Z</published>
-    <updated>2019-04-03T16:04:38.962Z</updated>
+    <updated>2019-04-04T08:10:59.389Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/images/demo/demo.jpg" alt title="只狼启动!"> </p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/images/demo/demo.jpg" alt title="只狼启动!"><br><img src="/images/demo/zhilang_1.jpg" alt title="菜!"></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;/images/demo/demo.jpg&quot; alt title=&quot;只狼启动!&quot;&gt; &lt;/p&gt;
+        &lt;p&gt;&lt;img src=&quot;/images/demo/demo.jpg&quot; alt title=&quot;只狼启动!&quot;&gt;&lt;br&gt;&lt;img src=&quot;/images/demo/zhilang_1.jpg&quot; alt title=&quot;菜!&quot;&gt;&lt;/p&gt;
 
       
     
     </summary>
     
+      <category term="game" scheme="https://heart4lion.github.io/categories/game/"/>
+    
+    
+      <category term="只狼" scheme="https://heart4lion.github.io/tags/%E5%8F%AA%E7%8B%BC/"/>
     
   </entry>
   
@@ -42,8 +46,8 @@
     <title>Hello World</title>
     <link href="https://heart4lion.github.io/2019/04/03/hello-world/"/>
     <id>https://heart4lion.github.io/2019/04/03/hello-world/</id>
-    <published>2019-04-03T15:18:25.869Z</published>
-    <updated>2019-04-03T15:18:25.870Z</updated>
+    <published>2019-04-03T00:04:14.000Z</published>
+    <updated>2019-04-04T08:10:09.262Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><a id="more"></a><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
@@ -56,6 +60,10 @@
     
     </summary>
     
+      <category term="hello" scheme="https://heart4lion.github.io/categories/hello/"/>
+    
+    
+      <category term="test" scheme="https://heart4lion.github.io/tags/test/"/>
     
   </entry>
   
