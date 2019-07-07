@@ -133,13 +133,13 @@
 
 
 
-  <meta name="description" content="前几天公司实施人员反映，某个生产环境的系统运行二三十分钟后会卡死，无法进行任何操作，重启项目后恢复正常。该tomcat未配置任何JVM参数，初步推测可能是内存泄露。在此记录一下分析过程。 GC日志分析添加JVM启动参数1234-XX:+PrintGCDetails   #打印GC详细信息#-XX:+PrintGCTimeStamps    #打印GC时间戳#-XX:+PrintHeapAtGC">
+  <meta name="description" content="前几天公司实施人员反映，某个生产环境的系统运行二三十分钟后会卡死，无法进行任何操作，重启项目后恢复正常。该tomcat未配置任何JVM参数，初步推测可能是内存泄露。在此记录一下分析过程。">
 <meta name="keywords" content="JVM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记一次生产环境系统卡死引申的JVM调优">
 <meta property="og:url" content="https://heart4lion.github.io/2019/07/07/dld_jvm_optimize/index.html">
 <meta property="og:site_name" content="Heart4lion&#39;s Clannad">
-<meta property="og:description" content="前几天公司实施人员反映，某个生产环境的系统运行二三十分钟后会卡死，无法进行任何操作，重启项目后恢复正常。该tomcat未配置任何JVM参数，初步推测可能是内存泄露。在此记录一下分析过程。 GC日志分析添加JVM启动参数1234-XX:+PrintGCDetails   #打印GC详细信息#-XX:+PrintGCTimeStamps    #打印GC时间戳#-XX:+PrintHeapAtGC">
+<meta property="og:description" content="前几天公司实施人员反映，某个生产环境的系统运行二三十分钟后会卡死，无法进行任何操作，重启项目后恢复正常。该tomcat未配置任何JVM参数，初步推测可能是内存泄露。在此记录一下分析过程。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://heart4lion.github.io/images/dld_jvm_optimize/dld_jvm_optimize1.png">
 <meta property="og:image" content="https://heart4lion.github.io/images/dld_jvm_optimize/dld_jvm_optimize2.png">
@@ -147,10 +147,10 @@
 <meta property="og:image" content="https://heart4lion.github.io/images/dld_jvm_optimize/dld_jvm_optimize4.png">
 <meta property="og:image" content="https://heart4lion.github.io/images/dld_jvm_optimize/dld_jvm_optimize5.png">
 <meta property="og:image" content="https://heart4lion.github.io/images/dld_jvm_optimize/dld_jvm_optimize6.png">
-<meta property="og:updated_time" content="2019-07-07T04:55:30.386Z">
+<meta property="og:updated_time" content="2019-07-07T05:00:48.378Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记一次生产环境系统卡死引申的JVM调优">
-<meta name="twitter:description" content="前几天公司实施人员反映，某个生产环境的系统运行二三十分钟后会卡死，无法进行任何操作，重启项目后恢复正常。该tomcat未配置任何JVM参数，初步推测可能是内存泄露。在此记录一下分析过程。 GC日志分析添加JVM启动参数1234-XX:+PrintGCDetails   #打印GC详细信息#-XX:+PrintGCTimeStamps    #打印GC时间戳#-XX:+PrintHeapAtGC">
+<meta name="twitter:description" content="前几天公司实施人员反映，某个生产环境的系统运行二三十分钟后会卡死，无法进行任何操作，重启项目后恢复正常。该tomcat未配置任何JVM参数，初步推测可能是内存泄露。在此记录一下分析过程。">
 <meta name="twitter:image" content="https://heart4lion.github.io/images/dld_jvm_optimize/dld_jvm_optimize1.png">
 
 
@@ -330,7 +330,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">2</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">1</span></a>
 
   </li>
         
@@ -492,7 +492,7 @@
                 
               
 
-              <time title="创建时间：2019-07-07 11:04:14 / 修改时间：04:55:30" itemprop="dateCreated datePublished" datetime="2019-07-07T11:04:14Z">2019-07-07</time>
+              <time title="创建时间：2019-07-07 11:04:14 / 修改时间：05:00:48" itemprop="dateCreated datePublished" datetime="2019-07-07T11:04:14Z">2019-07-07</time>
             
 
             
@@ -585,6 +585,7 @@
 
       
         <p>前几天公司实施人员反映，某个生产环境的系统运行二三十分钟后会卡死，无法进行任何操作，重启项目后恢复正常。该tomcat未配置任何JVM参数，初步推测可能是内存泄露。在此记录一下分析过程。</p>
+<a id="more"></a>
 <h2 id="GC日志分析"><a href="#GC日志分析" class="headerlink" title="GC日志分析"></a>GC日志分析</h2><h3 id="添加JVM启动参数"><a href="#添加JVM启动参数" class="headerlink" title="添加JVM启动参数"></a>添加JVM启动参数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-XX:+PrintGCDetails   <span class="comment">#打印GC详细信息#</span></span><br><span class="line">-XX:+PrintGCTimeStamps    <span class="comment">#打印GC时间戳#</span></span><br><span class="line">-XX:+PrintHeapAtGC      <span class="comment">#打印GC前后堆信息#</span></span><br><span class="line">-Xloggc:../logs/gc.log     <span class="comment">#日志输出目录#</span></span><br></pre></td></tr></table></figure>
 <p>启动运行16分钟后，取出日志文件得到GC分析结果：<br><img src="/images/dld_jvm_optimize/dld_jvm_optimize1.png" alt></p>
 <h3 id="GC详情"><a href="#GC详情" class="headerlink" title="GC详情"></a>GC详情</h3><p><strong>总停顿时间 4.42 秒<br>总停顿次数（GC次数） 83 次<br>最短停顿时间 0.00478 秒/最长停顿时间 1.29812 秒<br>累计FULL GC时间 2.49 秒，占总GC时间 56.3%<br>FULL GC次数 5 次<br>最短FULL GC时间 0.0866 秒/最长FULL GC时间 1.29812 秒<br>累计MINOR GC时间 1.93 秒，占总GC时间 43.7%<br>累计MINOR GC次数 78 次</strong></p>
@@ -834,8 +835,6 @@
                     
                   
                     
-                    
-                      
                     
                       
                     
