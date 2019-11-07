@@ -137,31 +137,31 @@
 <meta name="keywords" content="JAVA,JVM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记一次生产环境系统卡死引申的JVM调优">
-<meta property="og:url" content="https://heart4lion.github.io/2019/07/07/dld_jvm_optimize/index.html">
-<meta property="og:site_name" content="Heart4lion&#39;s Clannad">
+<meta property="og:url" content="https://lionheartW.github.io/2019/07/07/dld_jvm_optimize/index.html">
+<meta property="og:site_name" content="Lionheart">
 <meta property="og:description" content="前几天公司实施人员反映，某个生产环境的系统运行二三十分钟后会卡死，无法进行任何操作，重启项目后恢复正常。该tomcat未配置任何JVM参数，初步推测可能是内存泄露。在此记录一下分析过程。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://heart4lion.github.io/images/dld_jvm_optimize/dld_jvm_optimize1.png">
-<meta property="og:image" content="https://heart4lion.github.io/images/dld_jvm_optimize/dld_jvm_optimize2.png">
-<meta property="og:image" content="https://heart4lion.github.io/images/dld_jvm_optimize/dld_jvm_optimize3.png">
-<meta property="og:image" content="https://heart4lion.github.io/images/dld_jvm_optimize/dld_jvm_optimize4.png">
-<meta property="og:image" content="https://heart4lion.github.io/images/dld_jvm_optimize/dld_jvm_optimize5.png">
-<meta property="og:image" content="https://heart4lion.github.io/images/dld_jvm_optimize/dld_jvm_optimize6.png">
+<meta property="og:image" content="https://lionheartw.github.io/images/dld_jvm_optimize/dld_jvm_optimize1.png">
+<meta property="og:image" content="https://lionheartw.github.io/images/dld_jvm_optimize/dld_jvm_optimize2.png">
+<meta property="og:image" content="https://lionheartw.github.io/images/dld_jvm_optimize/dld_jvm_optimize3.png">
+<meta property="og:image" content="https://lionheartw.github.io/images/dld_jvm_optimize/dld_jvm_optimize4.png">
+<meta property="og:image" content="https://lionheartw.github.io/images/dld_jvm_optimize/dld_jvm_optimize5.png">
+<meta property="og:image" content="https://lionheartw.github.io/images/dld_jvm_optimize/dld_jvm_optimize6.png">
 <meta property="og:updated_time" content="2019-07-08T09:54:59.868Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记一次生产环境系统卡死引申的JVM调优">
 <meta name="twitter:description" content="前几天公司实施人员反映，某个生产环境的系统运行二三十分钟后会卡死，无法进行任何操作，重启项目后恢复正常。该tomcat未配置任何JVM参数，初步推测可能是内存泄露。在此记录一下分析过程。">
-<meta name="twitter:image" content="https://heart4lion.github.io/images/dld_jvm_optimize/dld_jvm_optimize1.png">
+<meta name="twitter:image" content="https://lionheartw.github.io/images/dld_jvm_optimize/dld_jvm_optimize1.png">
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Heart4lion's Clannad" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Lionheart" type="application/atom+xml">
 
 
 
   
   
-  <link rel="canonical" href="https://heart4lion.github.io/2019/07/07/dld_jvm_optimize/">
+  <link rel="canonical" href="https://lionheartW.github.io/2019/07/07/dld_jvm_optimize/">
 
 
 
@@ -171,7 +171,7 @@
   };
 </script>
 
-  <title>记一次生产环境系统卡死引申的JVM调优 | Heart4lion's Clannad</title>
+  <title>记一次生产环境系统卡死引申的JVM调优 | Lionheart</title>
   
 
 
@@ -230,7 +230,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Heart4lion's Clannad</span>
+        <span class="site-title">Lionheart</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -449,16 +449,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://heart4lion.github.io/2019/07/07/dld_jvm_optimize/">
+    <link itemprop="mainEntityOfPage" href="https://lionheartW.github.io/2019/07/07/dld_jvm_optimize/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="heart4lion">
+      <meta itemprop="name" content="lionheartW">
       <meta itemprop="description" content="知其然更知其所以然">
       <meta itemprop="image" content="/images/avatar/head_tuanzi.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Heart4lion's Clannad">
+      <meta itemprop="name" content="Lionheart">
     </span>
 
     
@@ -675,7 +675,7 @@
 
     
       <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
-  <img id="wechat_subscriber_qcode" src="/images/wechat/wechat_qrcode.png" alt="heart4lion wechat" style="width: 200px; max-width: 100%;">
+  <img id="wechat_subscriber_qcode" src="/images/wechat/wechat_qrcode.png" alt="lionheartW wechat" style="width: 200px; max-width: 100%;">
   <div>My Wechat</div>
 </div>
 
@@ -699,7 +699,7 @@
         
       
       <div style="display: inline-block">
-        <img src="/images/pay/wechatpay.jpg" alt="heart4lion 微信支付">
+        <img src="/images/pay/wechatpay.jpg" alt="lionheartW 微信支付">
         <p>微信支付</p>
       </div>
     
@@ -708,7 +708,7 @@
         
       
       <div style="display: inline-block">
-        <img src="/images/pay/alipay.jpg" alt="heart4lion 支付宝">
+        <img src="/images/pay/alipay.jpg" alt="lionheartW 支付宝">
         <p>支付宝</p>
       </div>
     
@@ -732,11 +732,11 @@
 
 <ul class="post-copyright">
   <li class="post-copyright-author">
-    <strong>本文作者： </strong>heart4lion</li>
+    <strong>本文作者： </strong>lionheartW</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://heart4lion.github.io/2019/07/07/dld_jvm_optimize/" title="记一次生产环境系统卡死引申的JVM调优">https://heart4lion.github.io/2019/07/07/dld_jvm_optimize/</a>
+    <a href="https://lionheartW.github.io/2019/07/07/dld_jvm_optimize/" title="记一次生产环境系统卡死引申的JVM调优">https://lionheartW.github.io/2019/07/07/dld_jvm_optimize/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -818,9 +818,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar/head_tuanzi.jpg" alt="heart4lion">
+              <img class="site-author-image" itemprop="image" src="/images/avatar/head_tuanzi.jpg" alt="lionheartW">
             
-              <p class="site-author-name" itemprop="name">heart4lion</p>
+              <p class="site-author-name" itemprop="name">lionheartW</p>
               <div class="site-description motion-element" itemprop="description">知其然更知其所以然</div>
           </div>
 
@@ -977,7 +977,7 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">heart4lion</span>
+  <span class="author" itemprop="copyrightHolder">lionheartW</span>
 
   
     <span class="post-meta-divider">|</span>
